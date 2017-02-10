@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+            <string>Roboto-Light</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="emsCreateHSVC">
+            <connections>
+                <outlet property="avatarImage" destination="jJw-xO-UxH" id="foC-c5-pnr"/>
+                <outlet property="holder" destination="VfD-PF-P15" id="Vp0-GA-CFs"/>
+                <outlet property="nameTF" destination="2Lh-au-ycY" id="CKl-52-n5x"/>
+                <outlet property="numberPick" destination="ELJ-81-CQI" id="MLj-fS-WzG"/>
+                <outlet property="saveBtn" destination="4zT-Zl-9bJ" id="hlH-6f-EVC"/>
+                <outlet property="scrollView" destination="KeO-ed-mKJ" id="ySv-C5-iyt"/>
+                <outlet property="tagsTF" destination="JtD-T5-Mbz" id="uRC-bY-6HT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewForTag" destination="0fa-8T-4Oc" id="5sd-tg-NR6"/>
+                <outlet property="viewWithPicker" destination="KRJ-mb-cF2" id="kgx-Hf-KNM"/>
+                <outlet property="viewWithScroll" destination="vTa-NZ-awT" id="WJK-9g-4Vs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bar" id="Okg-XS-BgW">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.47058823529999999" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BdW-LT-Aw4">
+                    <rect key="frame" x="0.0" y="13" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <state key="normal" image="menu"/>
+                    <state key="selected" image="menu_hover"/>
+                    <state key="highlighted" image="menu_hover"/>
+                    <state key="focused" image="menu_hover"/>
+                    <connections>
+                        <action selector="leftDrawerButtonPress" destination="-1" eventType="touchUpInside" id="Vmk-Vp-wnd"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Hot Spot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YYX-tB-Aql">
+                    <rect key="frame" x="52" y="13" width="217" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="vTa-NZ-awT">
+                    <rect key="frame" x="0.0" y="61" width="320" height="507"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="-26" y="207"/>
+        </view>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="KeO-ed-mKJ">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="664"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ltl-W5-Ov1">
+                    <rect key="frame" x="8" y="199" width="304" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="ADD PHOTO" backgroundImage="add_photo">
+                        <color key="titleColor" red="0.45490196078431372" green="0.75686274509803919" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="add_photo_hover"/>
+                    <connections>
+                        <action selector="fromGallary:" destination="-1" eventType="touchUpInside" id="hMb-6x-poX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CmK-Vu-M74">
+                    <rect key="frame" x="280" y="247" width="32" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" backgroundImage="tag_done"/>
+                    <state key="highlighted" backgroundImage="tag_done_hover"/>
+                    <connections>
+                        <action selector="addNewTag:" destination="-1" eventType="touchUpInside" id="az7-WA-RQn"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" id="0fa-8T-4Oc">
+                    <rect key="frame" x="-5" y="285" width="331" height="82"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="left" semanticContentAttribute="playback" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" id="2Lh-au-ycY">
+                    <rect key="frame" x="8" y="285" width="304" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="pkX-ze-Qsa"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4zT-Zl-9bJ">
+                    <rect key="frame" x="0.0" y="323" width="320" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                    <state key="normal" title="SAVE" backgroundImage="btn_green"/>
+                    <connections>
+                        <action selector="createHotSpotAction:" destination="-1" eventType="touchUpInside" id="xAQ-kG-owh"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New tag" minimumFontSize="17" id="JtD-T5-Mbz">
+                    <rect key="frame" x="8" y="247" width="274" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="L6u-mD-MjS"/>
+                    </connections>
+                </textField>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jJw-xO-UxH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="184"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wm3-Bd-hbP">
+                    <rect key="frame" x="214" y="247" width="55" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="tag_new"/>
+                    <state key="highlighted" backgroundImage="tag_new_hover"/>
+                    <connections>
+                        <action selector="showPicker" destination="-1" eventType="touchUpInside" id="Z82-OW-Xbv"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_hotspot_emty" id="VfD-PF-P15">
+                    <rect key="frame" x="115" y="48" width="90" height="87"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="787" y="255"/>
+        </scrollView>
+        <view contentMode="scaleToFill" id="KRJ-mb-cF2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="iKN-Yy-Qxl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="256"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.9450981021" green="0.96862751250000001" blue="0.97647064920000004" alpha="1" colorSpace="deviceRGB"/>
+                </imageView>
+                <pickerView tag="2" contentMode="scaleToFill" id="ELJ-81-CQI">
+                    <rect key="frame" x="0.0" y="62" width="320" height="162"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="epF-j3-3yl"/>
+                        <outlet property="delegate" destination="-1" id="yAx-bU-9vJ"/>
+                    </connections>
+                </pickerView>
+                <view contentMode="scaleToFill" id="3uv-qn-2TA">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackTranslucent" id="gcg-wX-3bc">
+                            <rect key="frame" x="0.0" y="-2" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="bPf-EY-s5o"/>
+                                <barButtonItem title="Item" style="plain" id="phs-ke-lKL">
+                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0Ud-kb-2Ko">
+                                        <rect key="frame" x="231" y="5.5" width="73" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" red="0.4431372549" green="0.63921568630000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hidePicker" destination="-1" eventType="touchUpInside" id="Xpz-nr-shl"/>
+                                        </connections>
+                                    </button>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="364" y="182"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add_photo" width="290" height="42"/>
+        <image name="add_photo_hover" width="290" height="42"/>
+        <image name="bar" width="621" height="125"/>
+        <image name="btn_green" width="290" height="42"/>
+        <image name="menu" width="50" height="50"/>
+        <image name="menu_hover" width="50" height="50"/>
+        <image name="new_hotspot_emty" width="121" height="121"/>
+        <image name="tag_done" width="32" height="27"/>
+        <image name="tag_done_hover" width="32" height="27"/>
+        <image name="tag_new" width="18" height="4"/>
+        <image name="tag_new_hover" width="18" height="4"/>
+    </resources>
+</document>

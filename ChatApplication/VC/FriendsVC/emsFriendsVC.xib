@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="emsFriendsVC">
+            <connections>
+                <outlet property="personeTable" destination="WAv-rz-Xxe" id="ZSh-dp-Wbh"/>
+                <outlet property="rHandler" destination="epQ-dK-oGh" id="KDp-RI-jUV"/>
+                <outlet property="requestsBtn" destination="5AF-lr-bJG" id="YyM-ly-Kdq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WAv-rz-Xxe">
+                    <rect key="frame" x="0.0" y="42" width="320" height="409"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="xjA-o2-zh2"/>
+                        <outlet property="delegate" destination="-1" id="Hpc-jP-eUe"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nv2-IF-EKz">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bar" translatesAutoresizingMaskIntoConstraints="NO" id="ttk-46-jTs">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YMb-Y9-iTV">
+                            <rect key="frame" x="42" y="26" width="224" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5AF-lr-bJG">
+                            <rect key="frame" x="270" y="21" width="45" height="45"/>
+                            <inset key="contentEdgeInsets" minX="13" minY="7" maxX="7" maxY="13"/>
+                            <state key="normal" image="requests_hover"/>
+                            <connections>
+                                <action selector="initDataSourceForRequests" destination="-1" eventType="touchUpInside" id="hUc-hT-Ie0"/>
+                            </connections>
+                        </button>
+                        <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epQ-dK-oGh" customClass="emsRequestsHandler">
+                            <rect key="frame" x="296" y="22" width="20" height="21"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="requests_number" translatesAutoresizingMaskIntoConstraints="NO" id="b8U-8k-o3O">
+                                    <rect key="frame" x="0.0" y="0.0" width="17" height="17"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDb-Ua-X7L">
+                                    <rect key="frame" x="0.0" y="-2" width="18" height="21"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="countLbl" destination="hDb-Ua-X7L" id="B52-xM-JlW"/>
+                                <outlet property="counterBG" destination="b8U-8k-o3O" id="AZ5-Z9-iCm"/>
+                            </connections>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HvL-DA-Qwc">
+                            <rect key="frame" x="0.0" y="18" width="44" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" image="menu"/>
+                            <state key="selected" image="menu_hover"/>
+                            <state key="highlighted" image="menu_hover"/>
+                            <state key="focused" image="menu_hover"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="475" y="360"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bar" width="621" height="125"/>
+        <image name="menu" width="50" height="50"/>
+        <image name="menu_hover" width="50" height="50"/>
+        <image name="requests_hover" width="100" height="100"/>
+        <image name="requests_number" width="56" height="56"/>
+    </resources>
+</document>

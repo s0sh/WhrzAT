@@ -1,0 +1,90 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import "UILabel+UILabel_CustomLable.h"
+#import <Foundation/Foundation.h>
+#import "AppDelegate.h"
+#import "MBProgressHUD.h"
+#import "ModelClass.h"
+#import "User.h"
+#import "Message.h"
+#import "Chat.h"
+#import "ApiCall.h"
+#import "Constants.h"
+
+
+#endif
+
+//------------------------------------
+
+#define kSeerverPath @"http://whrzat.gotests.com/api"
+#define postfixHotSpotDetail @"/details/spot"
+#define postfixLogin    @"/logins/facebooks"
+#define postfixLoginTwitter    @"/logins/twitters"
+#define postfixUpdateUser @"/updates/users"
+#define postfixNewHotSpot @"/adds/spots"
+#define postfixCheckDistance   @"/spot/distance"
+#define postfixDetaiUser    @"/details/user"
+#define postfixHotSpoList  @"/list/spot"
+#define postfixSetUserOnline  @"/sets/onlines/statuses"
+#define postfixAddImege  @"/adds/checkins/ands/imgs"
+
+#define postfixFriendsList  @"/list/friends"
+#define postfixaddImege  @"/adds/checkins/ands/imgs"
+#define postfixDetailUser  @"/details/user"
+
+#define postfixSendReq  @"/picture/requests"
+#define postfixLoveMe  @"/adds/spots/likes"
+
+#define postfixBeMyFriend @"/statuses/friends"
+#define postfixGetChatList  @"/list/chat"
+#define postfixRemoveChat  @"/removes/chats"
+#define postfixDeleteProfile @"/removes/users"
+#define postfixFriendsReq @"/list/request"
+#define postfixGetChatHotSpot  @"/adds/chats"
+#define postfixSendMessage  @"/adds/messages"
+#define postfixGetChatHotSpot  @"/adds/chats"
+#define postfixUpdateScanningRadius  @"/updates/settings"
+#define postfixGetScanningRadius  @"/settings"
+#define postfixGetChatList  @"/list/chat"
+#define postfixRemoveChat  @"/removes/chats"
+#define postfixCheckIn  @"/adds/checkins"
+#define postfixChatHistory @"/list/messages"
+
+
+//========================= New data
+
+
+
+
+//-----------------------------------
+
+
+
+#define API [ApiCall sharedInstance]
+
+#define MC [ModelClass sharedModel]
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+#define IS_IPHONE_4 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) == DBL_EPSILON )
+
+
+#define APP (AppDelegate *)[[UIApplication sharedApplication] delegate]
+
+#define USER_IDEOMA_IPHONE ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+
+#define IS_iOS_7    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+#define IS_iOS_8    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
